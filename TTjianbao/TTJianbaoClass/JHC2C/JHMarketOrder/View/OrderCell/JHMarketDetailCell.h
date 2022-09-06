@@ -1,0 +1,19 @@
+//
+//  JHMarketDetailCell.h
+//  TTjianbao
+//
+//  Created by 王记伟 on 2021/5/19.
+//  Copyright © 2021 YiJian Tech. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+NS_ASSUME_NONNULL_BEGIN
+@class JHMarketOrderModel;
+@interface JHMarketDetailCell : UITableViewCell
+@property (nonatomic, strong) JHMarketOrderModel *model;
+/** 是否是买家*/
+@property (nonatomic, assign) BOOL isBuyer;
+@end
+
+NS_ASSUME_NONNULL_END

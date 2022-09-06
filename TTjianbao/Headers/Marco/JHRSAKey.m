@@ -1,0 +1,20 @@
+//
+//  JHRSAKey.m
+//  TTjianbao
+//
+//  Created by lihui on 2020/4/27.
+//  Copyright © 2020 YiJian Tech. All rights reserved.
+//
+
+#import "JHRSAKey.h"
+
+@implementation JHRSAKey
+
+///公钥
+NSString *const kSignContractPublicKey = @"-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDFmbuGzN2tkfhj/LQ0vMwxfPy7KTpV+3un+/VFCfg99QvuWu0FT98S+9Vh1UIfTsPUXU/Tjo0TZgbQ27RtmMrwU3Tth+D9ez5ulqL2mROe58NjByprQ6u2BHjW77hHOXHz8hymTCT8KqwdFQNsEm74Dl2ns0sKFXl2Tr/H+5TYxQIDAQAB\n-----END PUBLIC KEY-----";
+
+///私钥
+NSString *const kSignContractPrivateKey = @"-----BEGIN PRIVATE KEY-----\nMIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAMWZu4bM3a2R+GP8tDS8zDF8/LspOlX7e6f79UUJ+D31C+5a7QVP3xL71WHVQh9Ow9RdT9OOjRNmBtDbtG2YyvBTdO2H4P17Pm6WovaZE57nw2MHKmtDq7YEeNbvuEc5cfPyHKZMJPwqrB0VA2wSbvgOXaezSwoVeXZOv8f7lNjFAgMBAAECgYAWdyr94W7WnADshT+Lu2dPvRESylYqjmP5rkitZ7vEd4a6u7W04+bNxrn03IUfABp9m3pG6C8b5H6j4ka6KyPvSZks3Ie0KenNfK6js/++bPcG83jRbdjNFMdB2MN3JFxnusRqtWxPKku96p6Bxk47Q+fGM6AmD69D+YeVzfC7QQJBAPFAQqgx13U7yrOkQCm1bYWjCQP6mS50zjiZ83iS4MZddzZIiQ381cKzZ30P5xPysyNsTtO+lv4R6piJiItta7ECQQDRrlAKtw+0PWmiMRowKygvd6hdjkYNTeSvK5aJnq+9nh8aTriLqtx7UXLBVn2l4F5E4+AOtblb3kxLVwOAAkdVAkAPgUXHcYybaEBa00+cXqCvWg8WRmDZ73/he2N+eFIh7Zff0UGduIY0gTtBemgrjAmfWTKnwTQLGDOvogc4jsvBAkBlTN+irZpKq7jTAQHz74W0mQygVlIFr3IiJt7Nkfq5kyDXptyFrYBjm4/jVBPUBbfFdIoU0TrB5X3akClCuNcZAkEAzu1C0dwuo+SPrpTEyWKzCEvrOXEe5wyuSR25kxFNeBX9Sh9ttKdRvwNo9BsRzNlKH94oxH0BsfIcYvgIqURyIA==\n-----END PRIVATE KEY-----";
+
+
+@end

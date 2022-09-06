@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+        <key>title</key>
+        <string>源头批发</string>
+		<key>iconNorImgName</key>
+		<string>icon_store_home_origin_nor</string>
+		<key>iconSelImgName</key>
+		<string>icon_store_home_origin_sel</string>
+		<key>titleNorColor</key>
+		<string>666666</string>
+		<key>titleSelColor</key>
+		<string>ffffff</string>
+	</dict>
+	<dict>
+        <key>title</key>
+        <string>鉴定把关</string>
+        <key>iconNorImgName</key>
+        <string>icon_store_home_appraise_nor</string>
+        <key>iconSelImgName</key>
+        <string>icon_store_home_appraise_sel</string>
+        <key>titleNorColor</key>
+        <string>666666</string>
+        <key>titleSelColor</key>
+        <string>ffffff</string>
+	</dict>
+	<dict>
+        <key>title</key>
+        <string>退换无忧</string>
+        <key>iconNorImgName</key>
+        <string>icon_store_home_seven_nor</string>
+        <key>iconSelImgName</key>
+        <string>icon_store_home_seven_sel</string>
+        <key>titleNorColor</key>
+        <string>666666</string>
+        <key>titleSelColor</key>
+        <string>ffffff</string>
+	</dict>
+	<dict>
+        <key>title</key>
+        <string>假一赔三</string>
+        <key>iconNorImgName</key>
+        <string>icon_store_home_pei_nor</string>
+        <key>iconSelImgName</key>
+        <string>icon_store_home_pei_sel</string>
+        <key>titleNorColor</key>
+        <string>666666</string>
+        <key>titleSelColor</key>
+        <string>ffffff</string>
+	</dict>
+</array>
+</plist>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="131" id="KGk-i7-Jjw" customClass="JHRechargeRecordCell">
+            <rect key="frame" x="0.0" y="0.0" width="337" height="131"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="337" height="130.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eA-qA-jBt">
+                        <rect key="frame" x="15" y="47" width="36" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44B-ja-Ikb" userLabel="Record Time">
+                        <rect key="frame" x="15" y="67" width="36" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blo-Ff-77h">
+                        <rect key="frame" x="135" y="57" width="36" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Gd-eh-SVD" userLabel="recordBeanCount">
+                        <rect key="frame" x="286" y="57" width="36" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RnE-MP-eMx">
+                        <rect key="frame" x="0.0" y="129.5" width="337" height="1"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="jOQ-ft-hyu"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="44B-ja-Ikb" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="10" id="5VO-D1-3pz"/>
+                    <constraint firstAttribute="trailing" secondItem="2Gd-eh-SVD" secondAttribute="trailing" constant="15" id="Qzj-JQ-rQg"/>
+                    <constraint firstItem="0eA-qA-jBt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="aHz-EH-jXr"/>
+                    <constraint firstItem="blo-Ff-77h" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="axG-7y-j21"/>
+                    <constraint firstAttribute="bottom" secondItem="RnE-MP-eMx" secondAttribute="bottom" id="cob-Do-ii9"/>
+                    <constraint firstAttribute="trailing" secondItem="RnE-MP-eMx" secondAttribute="trailing" id="hg6-B6-35i"/>
+                    <constraint firstItem="44B-ja-Ikb" firstAttribute="leading" secondItem="0eA-qA-jBt" secondAttribute="leading" id="khW-ja-Nzq"/>
+                    <constraint firstItem="0eA-qA-jBt" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="-10" id="ngq-WR-haq"/>
+                    <constraint firstItem="blo-Ff-77h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="135" id="pql-e7-oGJ"/>
+                    <constraint firstItem="2Gd-eh-SVD" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="xYF-jh-i2a"/>
+                    <constraint firstItem="RnE-MP-eMx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="xeZ-2j-3tc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="recordBeanCount" destination="2Gd-eh-SVD" id="iYw-R1-aaD"/>
+                <outlet property="recordDesc" destination="blo-Ff-77h" id="jHI-fU-ijq"/>
+                <outlet property="recordTime" destination="44B-ja-Ikb" id="HMJ-N0-B8R"/>
+                <outlet property="recordTitle" destination="0eA-qA-jBt" id="u2f-au-aCD"/>
+            </connections>
+            <point key="canvasLocation" x="165.59999999999999" y="148.87556221889056"/>
+        </tableViewCell>
+    </objects>
+</document>

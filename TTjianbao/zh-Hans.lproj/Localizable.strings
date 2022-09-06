@@ -1,0 +1,196 @@
+/* 
+  Localizable.strings
+  TTjianbao
+
+  Created by lihui on 2020/4/13.
+  Copyright © 2020 YiJian Tech. All rights reserved.
+*/
+///项目中字符串整理
+
+///注意：结尾不要忘记写分号，不然会报错！！！！！！！！！
+///命名规则：驼峰命名法 首个单词首字母小写 + 后面单词首字母大写
+
+/**标题相关*/
+/** 商城相关 */
+"currentSeckill" = "今日秒杀";
+///商品状态
+"finished" = "已结束";
+"distanceForEnd" = "距结束";
+
+"personCenter" = "个人中心";
+"myWallet" = "我的钱包";
+"stoneResale" = "原石回血";
+"myTools" = "我的工具";
+"toRecommend" = "为您推荐";
+"afterSale" = "退款售后";
+"myOrder" = "我的订单";
+"waitPay" = "待付款";
+"waitAppraise" = "待鉴定";
+"waitRecieve" = "待收货";
+"waitComment" = "待评价";
+"waitOnShelf" = "待上架";
+"recentlySale" = "最近出售";
+"sendSaleStone" = "寄售原石";
+"stonePocket" = "原石零钱";
+"pocket" = "零钱";
+"myRecycle" = "我的回收";
+"myPublish" = "我发布的";
+"mySale" = "我卖出的";
+"sendBackStone" = "寄回原石";
+"stoneOrder" = "原石订单";
+"personBid" = "有人出价";
+"buyInStone" = "买入原石";
+"myBid" = "我的出价";
+"personalTransSale" = "个人转售";
+"subsidy" = "津贴";
+"redbag" = "红包";
+"coupon" = "代金券";
+"bean" = "鉴豆";
+"myCompete" = "我的参拍";
+"wishList" = "心愿单";
+"myWishList" = "我的心愿单";
+"scoreExchange" = "积分兑换";
+"appraiseHistory" = "鉴定历史";
+"collectRiskAssess" = "收藏风险评估";
+"collect" = "收藏";
+"contactService" = "联系客服";
+"helpCenter" = "帮助中心";
+"draftBox" = "草稿箱";
+"set" = "设置";
+"myShop_lookEarnings" = "我的店铺 - 查看收益";
+"shopHome" = "店铺主页";
+"myScore" = "我的积分";
+"taskCenter" = "任务中心";
+"signInPolite" = "签到有礼";
+"scaleCard" = "扫描宝卡";
+"messageCenter" = "消息中心";
+"orderLogistics" = "订单物流";
+"discountActivity" = "优惠活动";
+"discountsInfo" = "优惠活动信息";
+
+///评价
+"goodsComment" = "宝贝评价";
+"friendlyAlert" = "温馨提示";
+
+/*button相关文字*/
+"cancel" = "取消";
+"sure" = "确定";
+"delete" = "删除";
+"sort" = "分类";
+"goOpen" = "去开启";
+"opened" = "已开启";
+"open" = "开启";
+"follow" = "关注";
+"followed" = "已关注";
+"fans" = "粉丝";
+"like" = "获赞";
+"score" = "积分";
+"commit" = "提交";
+"album" = "相册";
+"takePhoto" = "拍照";
+"iKnow" = "我知道了";
+"vote" = "投票";
+"guess" = "猜价";
+"spaceComment" = " 评论";
+
+
+/**label相关文字*/
+"goodsSatisfaction" = "商品相符度";
+"deliverSpeed" = "客服满意度";
+"appraiseService" = "物流满意度";
+"pleaseToLogin" = "请登录";
+
+
+/*提示相关*/
+"noData" = "暂无数据";
+"noNotice" = "暂无公告";
+"openMsgNotification" = "打开消息通知";
+"willExpired" = "即将过期";
+"saveLessThan1888" = "每月最少节约1888元";
+"comment30GetCash" = "评价满30字，传4张宝贝图即可获得现金红包。";
+"haveRedbagNoGet" = "您有红包未领取";
+"giveupRedbag" = "放弃红包";
+"getRedbag" = "我要红包";
+"commitSuccess" = "提交成功";
+"jumpFailure" = "跳转失败";
+"onlyNewUserCan" = "本次签到仅新注册用户可用";
+
+
+/**others*/
+"selectPic" = "选择图片";
+"clickCanVote" = "点击这里可以参加投票哦";
+"clickCanGuess" = "点击这里可以参加猜价哦";
+
+///银联签约
+"signContractTitle" = "银联商务自助签约";
+"searchBankBranch" = "搜索开户行";
+"unionPaySelectPageAlertInfo" = "签约前，您需要准备好身份证和银行卡信息";
+"beginSign" = "开始签约";
+"nextStep" = "下一步";
+
+"inputName" = "请填写姓名";
+"inputIdCard" = "请填写身份证号";
+"inputEmail" = "请填写邮箱";
+"inputTelephone" = "请填写手机号";
+"inputLegalHomeAddress" = "请输入家庭地址";
+"inputBingleIdNumber" = "请输入正确的身份证号";
+"inputBingleEmail" = "请输入正确的邮箱";
+"inputBingleTelephone" = "请输入正确的手机号";
+"selectFrontIdCardPic" = "请选择身份证正面照片";
+"selectBackIdCardPic" = "请选择身份证反面照片";
+"selectHandlePic" = "请选择手持身份证照片";
+"inputShopName" = "请填写营业名称";
+"selectShopProvince" = "请选择营业地区";
+"inputShopDetailAddr" = "请填写详细地址";
+"inputUniqueCode" = "请填写社会统一代码";
+"uploadShopLicensePic" = "请上传营业执照照片";
+"inputBankAccoName" = "请输入开户行名称";
+"inputBankCardNo" = "请输入银行卡号";
+"inputBingleBankCardNo" = "请输入正确的银行卡号";
+"selectBankAccoProvince" = "请选择开户地区";
+"selectBankBranch" = "请选择所属银行";
+"accountProofMetrial" = "请上账户证明材料";
+"inputBankTelephone" = "请输入银行预留手机号";
+"uploadBankCardFrontPic" = "请上传银行卡正面照片";
+"uploadBankCardBackPic" = "请上传银行卡反面照片";
+
+"submitDataSuccess" = "资料提交成功";
+"signUrlIsBlank" = "返回签约地址为空，请重试";
+"noBankBranch" = "没有找到任何银行，请更改开户地区查询";
+"getBankBranchFailed" = "获取支行列表失败";
+"requestPerFourHour" = "4个小时内只能请求一次，请稍候重试";
+
+"reSendSignCertRequest" = "重新发起认证";
+
+"tableFooterInfoText" = "本操作将严格保护您的隐私安全，请放心操作";
+"uploadPhoto" = "请上传以下照片";
+"allowVisitCameraWhenCannotUpload" = "若无法正常上传，请允许访问您的相机及相册权限";
+
+"haveNotSelectCustomerType" = "您还未选择签约类型哦~";
+
+"sign_contractWillCleanAllDataWhenQuit" = "退出签约后，已填写过的信息将全部清空。您确认要退出签约？";
+
+"moreThanFiveReRequest" = "验证失败超过5次，建议修改账户或重新发起认证";
+"lessThanFiveReRequest" = "验证失败，请核对打款金额和验证码后重新填写";
+
+"unionPayMoneyAndIdentyCode" = "银联商务将在您的以下对公账户打款一笔随机金额和验证码，请填写验证信息";
+"reBeginWhenNotRecieveMoneyCount" = "没有收到打款，请点击这里重新发起认证\n每隔4小时可申请一次";
+
+
+///银联签约入口
+"finishSignQuickly" = "服务升级！请您尽快完成签约";
+"signing" = "签约中";
+"checking" = "审核中";
+"goToSign" = "立即签约";
+"resign" = "重新签约";
+"saleRelax_crashQuickly" = "安心寄售，快捷变现";
+"unionPay_defaultTip" = "天天鉴宝联合银联商务共同提供交易清算服务";
+"checkingTitle" = "您的签约申请已提交，请等待审核";
+"checkingDesc" = "银联审核时间一般需要1-2个工作日";
+"checkingFailResign" = "您的签约审核失败，请重新签约";
+"unSignTitle" = "您还没有完成签约，暂时无法使用此功能。";
+"checkingTitle" = "您的签约申请已提交，请等待审核";
+"unPassCheckTitle" = "您的签约未通过审核，暂时无法使用此功能。";
+
+"checkingPostToast" = "帖子正在审核中,请稍后";
+

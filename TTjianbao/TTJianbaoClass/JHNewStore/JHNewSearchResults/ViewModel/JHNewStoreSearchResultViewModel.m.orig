@@ -1,0 +1,204 @@
+//
+//  JHNewStoreSearchResultViewModel.m
+//  TTjianbao
+//
+//  Created by haozhipeng on 2021/2/24.
+//  Copyright © 2021 YiJian Tech. All rights reserved.
+//
+
+#import "JHNewStoreSearchResultViewModel.h"
+#import "JHNewStoreSearchResultBusiness.h"
+#import <SVProgressHUD.h>
+#import <MBProgressHUD.h>
+
+@interface JHNewStoreSearchResultViewModel ()
+@property (nonatomic, assign) NSUInteger pageSize;
+@property (nonatomic, assign) NSUInteger pageNum;
+@property (nonatomic, assign) BOOL isRefresh;
+@property (nonatomic, copy) NSString *keyword;
+@property (nonatomic, strong) NSMutableArray *productIdArray;
+@end
+
+@implementation JHNewStoreSearchResultViewModel
+
+- (instancetype)init{
+    self = [super init];
+    if (self) {
+        [self initialize];
+    }
+    return self;
+}
+- (void)initialize{
+    self.pageSize = 20;
+    self.pageNum = 1;
+    @weakify(self)
+    [self.searchResultCommand.executionSignals.switchToLatest subscribeNext:^(id  _Nullable x) {
+        @strongify(self)
+        if (x) {
+            [self constructData:x];
+        }else{
+            [self.errorRefreshSubject sendNext:@YES];
+        }
+        
+    }];
+
+}
+
+- (void)constructData:(id)data{
+    RequestModel *model = (RequestModel *)data;
+    if (self.isRefresh) {
+        [self.searchListDataArray removeAllObjects];
+        self.searchListDataArray = [JHNewStoreHomeGoodsProductListModel mj_objectArrayWithKeyValuesArray:model.data];
+        [self jhNewSearchResultViewExposure:self.searchListDataArray];
+        [self.updateSearchSubject sendNext:@YES];
+    }else{
+        NSMutableArray * listDataArr = [JHNewStoreHomeGoodsProductListModel mj_objectArrayWithKeyValuesArray:model.data];
+        [self jhNewSearchResultViewExposure:listDataArr];
+        [self.searchListDataArray addObjectsFromArray:listDataArr];
+        [self.moreSearchSubject sendNext:@YES];
+    }
+
+    //数据加载完了没
+    if ([JHNewStoreHomeGoodsProductListModel mj_objectArrayWithKeyValuesArray:model.data].count > 0) {
+        self.pageNum ++;
+    }else{
+        if (self.pageNum > 1) {
+            [self.noMoreDataSubject sendNext:nil];
+        }
+    }
+
+}
+
+///曝光
+- (void)jhNewSearchResultViewExposure:(NSMutableArray *)dataList{
+    for (JHNewStoreHomeGoodsProductListModel *dataModel in dataList) {
+        [self.productIdArray addObject:[NSString stringWithFormat:@"%ld",dataModel.productId]];
+    }
+    [JHAllStatistics jh_allStatisticsWithEventId:@"searchResultView" params:@{
+        @"key_word":self.keyword,
+        @"item_ids":[self.productIdArray componentsJoinedByString:@","]
+    } type:JHStatisticsTypeSensors];
+    
+    [self.productIdArray removeAllObjects];
+
+}
+
+#pragma mark - Lazy
+
+- (NSMutableArray *)searchListDataArray{
+    if (!_searchListDataArray) {
+        _searchListDataArray = [NSMutableArray array];
+    }
+    return _searchListDataArray;
+}
+
+<<<<<<< HEAD
+- (RACCommand *)searchResultCommand{
+    if (!_searchResultCommand) {
+=======
+- (RACCommand *)updateSearchCommand{
+    if (!_updateSearchCommand) {
+        @weakify(self)
+        _updateSearchCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+            @strongify(self)
+            self.keyword = input[@"queryWord"];
+            return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+                NSMutableDictionary *requestDic = [NSMutableDictionary dictionary];
+                requestDic[@"type"] = @"sell";
+                requestDic[@"queryWord"] = input[@"queryWord"];
+                requestDic[@"sort"] = input[@"sort"];
+                requestDic[@"minPrice"] = input[@"minPrice"];
+                requestDic[@"maxPrice"] = input[@"maxPrice"];
+                requestDic[@"pageSize"] = @(self.pageSize);
+                requestDic[@"pageNo"] = @(1);
+                requestDic[@"directDelivery"] = input[@"directDelivery"];
+                [MBProgressHUD showHUDAddedTo:JHKeyWindow animated:YES];
+                [JHNewStoreSearchResultBusiness requestProductSearchWithParams:requestDic Completion:^(RequestModel * _Nonnull respondObject, NSError * _Nullable error) {
+                    [MBProgressHUD hideHUDForView:JHKeyWindow animated:YES];
+                    if (!error ) {
+                        [subscriber sendNext:respondObject];
+                    }else{
+                        [subscriber sendNext:nil];
+                        [SVProgressHUD showErrorWithStatus:respondObject.message];
+                    }
+                    [subscriber sendCompleted];
+
+                }];
+                
+                return nil;
+            }];
+        }];
+    }
+    return _updateSearchCommand;
+}
+- (RACCommand *)moreSearchCommand{
+    if (!_moreSearchCommand) {
+>>>>>>> ce8ffb986c2c228c3f33aa553c0507bb23dbb927
+        @weakify(self)
+        _searchResultCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+            @strongify(self)
+            self.keyword = input[@"queryWord"];
+            self.isRefresh = [input[@"isRefresh"] boolValue];
+            if (self.isRefresh) {
+                self.pageNum = 1;
+            }
+            return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+                NSMutableDictionary *requestDic = [NSMutableDictionary dictionary];
+                requestDic[@"type"] = @"sell";
+                requestDic[@"queryWord"] = input[@"queryWord"];
+                requestDic[@"sort"] = input[@"sort"];
+                requestDic[@"minPrice"] = input[@"minPrice"];
+                requestDic[@"maxPrice"] = input[@"maxPrice"];
+                requestDic[@"pageSize"] = @(self.pageSize);
+                requestDic[@"pageNo"] = @(self.pageNum);
+                requestDic[@"directDelivery"] = input[@"directDelivery"];;
+                [JHNewStoreSearchResultBusiness requestProductSearchWithParams:requestDic Completion:^(RequestModel * _Nonnull respondObject, NSError * _Nullable error) {
+                    if (!error ) {
+                        [subscriber sendNext:respondObject];
+                    }else{
+                        [subscriber sendNext:nil];
+                        JHTOAST(error.localizedDescription);
+                    }
+                    [subscriber sendCompleted];
+
+                }];
+                
+                return nil;
+            }];
+        }];
+    }
+    return _searchResultCommand;
+}
+
+
+- (RACSubject *)updateSearchSubject{
+    if(!_updateSearchSubject){
+        _updateSearchSubject = [[RACSubject alloc] init];
+    }
+    return _updateSearchSubject;
+}
+- (RACSubject *)moreSearchSubject{
+    if (!_moreSearchSubject) {
+        _moreSearchSubject = [[RACSubject alloc] init];
+    }
+    return _moreSearchSubject;
+}
+- (RACSubject *)errorRefreshSubject{
+    if (!_errorRefreshSubject) {
+        _errorRefreshSubject = [[RACSubject alloc] init];
+    }
+    return _errorRefreshSubject;
+}
+- (RACSubject *)noMoreDataSubject{
+    if (!_noMoreDataSubject){
+        _noMoreDataSubject = [[RACSubject alloc] init];
+    }
+    return _noMoreDataSubject;
+}
+- (NSMutableArray *)productIdArray{
+    if (!_productIdArray) {
+        _productIdArray = [NSMutableArray array];
+    }
+    return _productIdArray;
+}
+@end

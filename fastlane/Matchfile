@@ -1,0 +1,13 @@
+git_url("http://opsgit.ttjianbao.iner/hanxiao/ioscer.git")
+
+storage_mode("git")
+
+type("development") # The default type, can be: appstore, adhoc, enterprise or development
+
+app_identifier(["com.tianmou.jianbao", "com.tianmou.jianbao.TTjianbaoPushExt"])
+username("242799999@qq.com") # Your Apple Developer Portal username
+
+# For all available options run `fastlane match --help`
+# Remove the # in the beginning of the line to enable the other options
+
+# The docs are available on https://docs.fastlane.tools/actions/match

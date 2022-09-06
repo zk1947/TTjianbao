@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Ee9-V6-jxG" customClass="JHLiveRoomGuidanceView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Pm-0U-1Bn">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guide_appraise_btn" translatesAutoresizingMaskIntoConstraints="NO" id="Sco-nV-HuZ">
+                            <rect key="frame" x="159" y="586.5" width="154" height="74"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guide_know_btn" translatesAutoresizingMaskIntoConstraints="NO" id="NbY-dr-hXR">
+                            <rect key="frame" x="39" y="164.5" width="237" height="105"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guide_appraise_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="hRr-Mx-kxU">
+                            <rect key="frame" x="-181" y="343.5" width="472" height="241"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Sco-nV-HuZ" firstAttribute="top" secondItem="hRr-Mx-kxU" secondAttribute="bottom" constant="2" id="1pL-yS-kyK"/>
+                        <constraint firstItem="Sco-nV-HuZ" firstAttribute="trailing" secondItem="hRr-Mx-kxU" secondAttribute="trailing" constant="22" id="HgE-BE-Lez"/>
+                        <constraint firstItem="hRr-Mx-kxU" firstAttribute="trailing" secondItem="NbY-dr-hXR" secondAttribute="trailing" constant="15" id="UTn-FX-NuI"/>
+                        <constraint firstAttribute="bottom" secondItem="Sco-nV-HuZ" secondAttribute="bottom" constant="6.5" id="bDt-by-7Fg"/>
+                        <constraint firstItem="hRr-Mx-kxU" firstAttribute="top" secondItem="NbY-dr-hXR" secondAttribute="bottom" constant="74" id="kiu-GE-Sh6"/>
+                        <constraint firstAttribute="trailing" secondItem="Sco-nV-HuZ" secondAttribute="trailing" constant="62" id="ktx-1M-btB"/>
+                    </constraints>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gsK-Ai-0IR">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guide_like_btn" translatesAutoresizingMaskIntoConstraints="NO" id="7R0-9c-rgs">
+                            <rect key="frame" x="286" y="586.5" width="74" height="74"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guide_like_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="fH2-5p-3YF">
+                            <rect key="frame" x="-130" y="390.5" width="453" height="241"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guide_know_btn" translatesAutoresizingMaskIntoConstraints="NO" id="xHS-Bu-I6E">
+                            <rect key="frame" x="40" y="233.5" width="237" height="105"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="fH2-5p-3YF" firstAttribute="top" secondItem="xHS-Bu-I6E" secondAttribute="bottom" constant="52" id="97H-PO-1Dn"/>
+                        <constraint firstItem="7R0-9c-rgs" firstAttribute="bottom" secondItem="fH2-5p-3YF" secondAttribute="bottom" constant="29" id="BQl-D8-N4W"/>
+                        <constraint firstItem="fH2-5p-3YF" firstAttribute="trailing" secondItem="xHS-Bu-I6E" secondAttribute="trailing" constant="46" id="Gmj-dl-2sQ"/>
+                        <constraint firstItem="7R0-9c-rgs" firstAttribute="trailing" secondItem="fH2-5p-3YF" secondAttribute="trailing" constant="37" id="VQK-7l-lQu"/>
+                        <constraint firstAttribute="bottom" secondItem="7R0-9c-rgs" secondAttribute="bottom" constant="6.5" id="Z2B-b0-2Fw"/>
+                        <constraint firstAttribute="trailing" secondItem="7R0-9c-rgs" secondAttribute="trailing" constant="15" id="ht3-a3-xpj"/>
+                    </constraints>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LQ6-ni-jiQ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guide_slide_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="qFs-Qh-00v">
+                            <rect key="frame" x="-72.5" y="165" width="520" height="297"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guide_start_btn" translatesAutoresizingMaskIntoConstraints="NO" id="LaQ-Lr-nvU">
+                            <rect key="frame" x="69" y="484" width="237" height="105"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="LaQ-Lr-nvU" firstAttribute="top" secondItem="qFs-Qh-00v" secondAttribute="bottom" constant="22" id="Otn-2q-p0I"/>
+                        <constraint firstItem="qFs-Qh-00v" firstAttribute="centerY" secondItem="LQ6-ni-jiQ" secondAttribute="centerY" constant="-20" id="l9V-8N-yfx"/>
+                        <constraint firstItem="qFs-Qh-00v" firstAttribute="centerX" secondItem="LQ6-ni-jiQ" secondAttribute="centerX" id="qOd-TY-LN4"/>
+                        <constraint firstItem="LaQ-Lr-nvU" firstAttribute="centerX" secondItem="qFs-Qh-00v" secondAttribute="centerX" id="vew-7t-LY7"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80482127568493156" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="LQ6-ni-jiQ" secondAttribute="trailing" id="64W-6m-aeh"/>
+                <constraint firstItem="LQ6-ni-jiQ" firstAttribute="leading" secondItem="Ee9-V6-jxG" secondAttribute="leading" id="FHH-YB-GU3"/>
+                <constraint firstAttribute="trailing" secondItem="gsK-Ai-0IR" secondAttribute="trailing" id="URM-uE-PqE"/>
+                <constraint firstAttribute="bottom" secondItem="gsK-Ai-0IR" secondAttribute="bottom" id="WBl-SE-Jau"/>
+                <constraint firstItem="gsK-Ai-0IR" firstAttribute="leading" secondItem="Ee9-V6-jxG" secondAttribute="leading" id="c3Z-Gg-zqR"/>
+                <constraint firstItem="6Pm-0U-1Bn" firstAttribute="top" secondItem="Ee9-V6-jxG" secondAttribute="top" id="g9v-cC-ZRH"/>
+                <constraint firstAttribute="trailing" secondItem="6Pm-0U-1Bn" secondAttribute="trailing" id="jMm-yh-v5Y"/>
+                <constraint firstItem="gsK-Ai-0IR" firstAttribute="top" secondItem="Ee9-V6-jxG" secondAttribute="top" id="pPx-EC-6aL"/>
+                <constraint firstAttribute="bottom" secondItem="LQ6-ni-jiQ" secondAttribute="bottom" id="q0K-bg-wRO"/>
+                <constraint firstAttribute="bottom" secondItem="6Pm-0U-1Bn" secondAttribute="bottom" id="t9n-RT-S7U"/>
+                <constraint firstItem="6Pm-0U-1Bn" firstAttribute="leading" secondItem="Ee9-V6-jxG" secondAttribute="leading" id="wbz-p1-k5F"/>
+                <constraint firstItem="LQ6-ni-jiQ" firstAttribute="top" secondItem="Ee9-V6-jxG" secondAttribute="top" id="zTH-qt-h6X"/>
+            </constraints>
+            <connections>
+                <outlet property="appraiseBtnToBottom" destination="bDt-by-7Fg" id="Kfu-yL-n4h"/>
+                <outlet property="firstGuide" destination="6Pm-0U-1Bn" id="f0m-hm-LjB"/>
+                <outlet property="lastGuide" destination="LQ6-ni-jiQ" id="2nV-qc-30u"/>
+                <outlet property="likeBtnToBottom" destination="Z2B-b0-2Fw" id="qUM-za-IQk"/>
+                <outlet property="secondGuide" destination="gsK-Ai-0IR" id="QrT-R7-g5A"/>
+            </connections>
+            <point key="canvasLocation" x="-94" y="80"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="guide_appraise_arrow" width="236" height="120.5"/>
+        <image name="guide_appraise_btn" width="77" height="37"/>
+        <image name="guide_know_btn" width="118.5" height="52.5"/>
+        <image name="guide_like_arrow" width="226.5" height="120.5"/>
+        <image name="guide_like_btn" width="37" height="37"/>
+        <image name="guide_slide_arrow" width="260" height="148.5"/>
+        <image name="guide_start_btn" width="118.5" height="52.5"/>
+    </resources>
+</document>

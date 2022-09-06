@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+            <title>h5交互测试</title>
+            <script type="text/javascript">
+                function sum(a,b){
+                    return a+b;
+                }
+            
+            function getToken(){
+                var result =window.appAndroid.getToken();
+                document.getElementById("p").innerHTML=result;
+            }
+            
+            function closeWebPage(){
+                window.appAndroid.closeWebPage();
+            }
+            
+            function showAlert(){
+                alert('aaaaaaaaaa');
+            }
+            
+            function startNative(){
+                window.appAndroid.startNative('com.yiding.jianhuo.room.room.live.view.LiveActivity',"{'roomId':'15'}");
+            }
+            
+            function setTitle(){
+                window.appAndroid.setWebTitle('这是测试标题');
+            }
+            
+            function forResult(tag,data){
+                document.getElementById("p").innerHTML=tag+JSON.stringify(data);
+            }
+            
+            function readData(){
+                var data = window.appAndroid.subClientMsg('WebAction_QueryData', '', '', "{'key':'save'}");
+                document.getElementById("p").innerHTML=data;
+            }
+            
+            function sub(action, tag, callback, params){
+                console.log(JSON.stringify(params));
+                window.appAndroid.subClientMsg(action, tag, callback, JSON.stringify(params));
+            }
+            
+            function natAction_SubPrivateSocketMsg(data){
+                document.getElementById("p").innerHTML=JSON.stringify(data);
+            }
+            
+            function natAction_SubPublicSocketMsg(data){
+                var json = JSON.parse(data);
+                alert(json.roomId);
+                var json2 = data.parseJson();
+                alert(json2.roomId);
+                document.getElementById("p").innerHTML=JSON.stringify(data);
+            }
+            
+            function getUserInfo(){
+                document.getElementById("p").innerHTML=JSON.stringify(window.appAndroid.getUserInfo());
+            }
+            
+            function getRoomInfo(){
+                document.getElementById("p").innerHTML=JSON.stringify(window.appAndroid.subClientMsg('WebAction_GetRoomInfo','','',''));
+            }
+            
+            function getScreenWidth(){
+                document.getElementById("p").innerHTML=JSON.stringify(window.appAndroid.getScreenWidth());
+            }
+            
+            function getScreenHeight(){
+                document.getElementById("p").innerHTML=JSON.stringify(window.appAndroid.getScreenHeight());
+            }
+            
+            function getScreenDensity(){
+                document.getElementById("p").innerHTML=JSON.stringify(window.appAndroid.getScreenDensity());
+            }
+            
+            function doShare(){
+                sub('WebAction_Share', '', '', {'showType':1,'type':1,'title':'分享的标题','digest':'分享的描述','url':'http://www.baidu.com','pic':'http://img5.imgtn.bdimg.com/it/u=3300305952,1328708913&fm=26&gp=0.jpg'})
+            }
+            
+            function showShareIcon(){
+                window.appAndroid.showShareIcon();
+            }
+            
+            var upload = function(c, d){
+                "use strict";
+                var $c = document.querySelector(c),
+                $d = document.querySelector(d),
+                file = $c.files[0],
+                reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = function(e){
+                    $d.setAttribute("src", e.target.result);
+                };
+            };
+            
+                </script>
+    </head>
+    <>
+        <button onclick="getToken()">获取用户token</button>
+        <button onclick="closeWebPage()">关闭页面</button>
+        <button onclick="startNative()">启动本地页面</button>
+        <button onclick="showAlert()">alert</button>
+        <button onclick="setTitle()">设置标题</button>
+        <button onclick="window.appAndroid.showToast('aaaaaaaaaa')">吐司</button>
+        <button onclick="sub('WebAction_OpenWebView', '', '', {'url':'file:///android_asset/h5.html','target':'self','width':600,'height':800,'gravity':'bottomCenter'})">打开WebDialog</button>
+        <button onclick="sub('WebAction_OpenWebView', '', '', {'url':'http://www.baidu.com','target':'blank','windowSizetype':'2'})">打开WebActivity</button>
+        <button onclick="sub('WebAction_ResizeWebView', '', '', {'width':1000,'height':800,'gravity':'topCenter'})">重新设置webDialog大小</button>
+        <button onclick="sub('WebAction_Share', '', '', {'showType':1,'type':1,'title':'分享的标题','digest':'分享的描述','url':'http://www.baidu.com','pic':'http://img5.imgtn.bdimg.com/it/u=3300305952,1328708913&fm=26&gp=0.jpg'})">分享弹窗</button>
+        <button onclick="sub('WebAction_Share', '', '', {'showType':2,'type':1,'platform':'1','title':'分享的标题','digest':'分享的描述','url':'http://www.baidu.com','pic':'http://img5.imgtn.bdimg.com/it/u=3300305952,1328708913&fm=26&gp=0.jpg'})">直接分享到微信</button>
+        <button onclick="sub('WebAction_MergeData', 'aaaaaaaaaa', 'forResult', {'key':'save','obj':'测试数据'})">保存数据</button>
+        <button onclick="readData()">读取数据</button>
+        <button onclick="sub('WebAction_MergeData', 'aaaaaaaaaa', 'forResult', {'key':'save'})">删除数据</button>
+        <button onclick="sub('WebAction_PrivateSocketMsg', '', '', {'key':'save'})">私有协议转发消息</button>
+        <button onclick="sub('WebAction_PrivateSocketMsg', '', '', {'key':'save'})">私有协议转发消息</button>
+        <button onclick="getUserInfo()">获取用户信息</button>
+        <button onclick="getRoomInfo()">获取房间信息</button>
+        <button onclick="getScreenWidth()">获取屏幕宽度</button>
+        <button onclick="getScreenHeight()">获取屏幕高度</button>
+        <button onclick="showShareIcon()">显示分享按钮</button>
+        <br>
+        <input id="fileBtn" type="file" onchange="upload('#fileBtn', '#img');" accept="image/*" capture="camera"/>
+        <img src="" id="img"/>
+        <p id="p"></p>
+        </body>
+</html>

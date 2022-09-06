@@ -1,0 +1,232 @@
+#项目中target的名称
+schemeName = ""
+# 版本号
+version = ""
+
+export_method = "development"
+#ipa 名
+output_name = ""
+
+#蒲公英AppKey
+pgyerAppKey = "7175a5a5068d3c408f4b19be21a25e33"
+
+#蒲公英Api_key
+pgyerApi_key = "c077f03507f2d0122e203e8a3662fcee"
+#蒲公英User_key
+pgyerUser_key = "e195a321a191e2b0736b14f2bf1ffdd5"
+#钉钉token
+dingToken = "32440629c388115a95b9c647046a39d50d8091a93b05e4ae25fa2944e11fd375"
+# dingToken = "17b002acf1c7813828265d2696a2528e2a16fe58c8b4d287c3ca33af1b92c870"
+#bugly
+devBuglyAppId = "f41366009e"
+devBuglyAppKey = "49275194-b347-46dd-811b-5a3c0247cc7a"
+buglyAppId = "7fe8814afe"
+buglyAppKey = "3aa17acc-0784-47d9-b503-7ff811c52fe5"
+#
+bundle_id = "com.tianmou.jianbao"
+
+
+default_platform(:ios)
+platform :ios do     #指定持续集成对象的平台名称
+    before_all do |lane, options|
+        schemeName = options[:schemeName]
+        
+        version = get_version_number_from_xcodeproj(
+             xcodeproj: "TTjianbao.xcodeproj", 
+             target: schemeName, 
+        )
+        if schemeName == "TTjianbaoGuoji" 
+            bundle_id = "com.tianmou.jianbaoguoji"
+            pgyerAppKey = "7d78fe9514c963638d5d673f02ceb43a"
+        end
+        puts "------#{schemeName}-------"
+    end
+    # ----------------------- 打包内测.ipa文件 -----------------------
+    lane :debug do 
+        puts "*************| 开始打包-Debug |*************"
+        export_method = "development"
+        #钉钉消息-开始打包
+        dingMsg(methodText: "-测试-")
+        
+        package(configuration: "Debug")
+        #蒲公英上传
+        pgyerUpdate()
+        #钉钉通知
+        dingTalk(methodText: "-测试-")
+    end
+
+    lane :release do 
+        puts "*************| 开始打包-Release |*************"
+        #钉钉消息-开始打包
+        dingMsg(methodText: "-发布-")
+        export_method = "ad-hoc"
+        # match(
+        #     type:appstore,
+            # readonly:true,
+        # )
+        package(configuration: "Release")
+        #蒲公英上传
+        pgyerUpdate()
+        #钉钉通知
+        dingTalk(methodText: "-发布-", version: version)
+    end
+
+    lane :appStore do
+        puts "*************| 开始打包-AppStore |*************"
+        export_method = "app-store"
+        # package(configuration: "Release")
+        deliver(
+            # 选择跳过图片和元数据上传，自己去配置
+            skip_screenshots:true,
+            skip_metadata:true,
+            # 上传所有信息到App Store
+            force:true,
+            )
+        puts "*************| 上传AppStore成功🎉 |*************"
+        
+    end
+
+    lane :testFlight do
+        puts "*************| 开始打包-TestFlight |*************"
+        export_method = "app-store"
+
+        dingMsg(methodText: "-TestFlight-")
+        
+        buildbump(buildNumber: latest_testflight_build_number(version: version))
+
+        package(configuration: "Release")
+
+        upload_to_testflight()
+
+        ding_talk_msg_push(
+            token: dingToken, 
+            text: "天天鉴宝-iOS构建完成-TestFlight-包-版本号:#{version} 链接： https://testflight.apple.com/join/z509BScy", 
+            at_all: false
+        )
+    end
+    lane :uploadToTestflight do
+        
+        upload_to_testflight(
+            ipa: "./fastlane/build/TTjianbao-app-store-2021-08-12-10-44.ipa",
+        )
+    end
+    # ----------------------- 打包 -----------------------
+    lane :package do |options| 
+        
+        #打包方式
+        configuration = options[:configuration]
+        if options[:configuration] == nil 
+            configuration = "Debug"
+        end
+        puts "*************| 开始打包 |-#{schemeName}-#{configuration}-*************"
+        output_name = "#{schemeName}-#{export_method}-#{Time.new.strftime("%Y-%m-%d-%H-%M")}"
+      
+        gym(
+            #指定scheme的名字
+            scheme: "#{schemeName}",
+            #输出的ipa名称
+            output_name: output_name,
+            # 是否清空以前的编译信息 true：是
+            clean:true,
+            # 指定打包方式，Release 或者 Debug
+            configuration: "#{configuration}",
+            # 隐藏没有必要的信息
+            silent:true,
+            # 指定打包所使用的输出方式，目前支持app-store, package, ad-hoc, enterprise, development
+            export_method:  "#{export_method}",
+            # 指定输出文件夹，这里会保存我们最后生成的ipa文件，也就是存到了我们上面提到的fastlane文件夹中的build文件夹中
+            output_directory:"./fastlane/build",
+            # 自动签名
+            xcargs: "-allowProvisioningUpdates",
+        )
+
+        # 上传dsym 到bugly
+        updateDsym(version: version, configuration:configuration)
+    end
+
+    # ----------------------- 钉钉通知 -----------------------
+    lane :dingTalk do |options|
+        #钉钉通知
+        puts "钉钉通知"
+        methodText = options[:methodText]
+        desc = "天天鉴宝-iOS构建完成-#{methodText}包-版本号:#{version}-下载地址：https://www.pgyer.com/1Ncu"
+        puts desc
+        # 钉钉机器人通知
+        ding_talk(
+            access_token: dingToken,
+            api_key: "#{pgyerApi_key}",
+            app_key: "#{pgyerAppKey}",
+            markdown_desc: desc,
+        )
+    end
+
+    lane :dingMsg do |options|
+        methodText = options[:methodText]
+        ding_talk_msg_push(token: dingToken, text: "天天鉴宝-iOS开始构建-#{methodText}包-版本号:#{version}", at_all: false)
+    end
+
+    # ----------------------- 蒲公英 -----------------------
+    lane :pgyerUpdate do |options|
+        puts "***************开始上传到蒲公英****************"
+        #开始上传ipa到蒲公英，这里用的是蒲公英提供的插件
+        #update_description代表更新信息，password代表安装密码
+        pgyer(
+            update_description: "#{"天天鉴宝"}", 
+            api_key: "#{pgyerApi_key}", 
+            user_key: "#{pgyerUser_key}", 
+            password: "1234", 
+            install_type: "2",
+        )
+    end
+
+    # ----------------------- 上传dsym -----------------------
+    lane :updateDsym do |options| 
+        #上传dsym
+        puts "开始上传dsym"
+        appid = buglyAppId
+        appKey = buglyAppKey
+    
+        if options[:configuration] == "Debug" 
+            appid = devBuglyAppId
+            appKey = devBuglyAppKey
+        end
+
+        upload_dsym_to_bugly(
+            file_path: "./fastlane/build/#{output_name}.app.dSYM.zip",
+            app_key: appKey,
+            app_id: appid,
+            version: options[:version],
+            bundle_id:bundle_id,
+        )
+    end
+    # build 号自增
+    lane :buildbump do |options|
+        #版本号
+        
+        build_number = options[:buildNumber]
+
+        if build_number == nil
+            build_number = "1"
+        end
+        
+        if build_number == 1 
+            build_number = version + ".0"
+        elsif build_number[0..4] != version
+            build_number = version + ".0"
+        end
+
+        lastStr = build_number[6..build_number.length]
+
+        lastNum = lastStr.to_i
+        lastNum = lastNum + 1
+        lastStr = lastNum.to_s
+        
+        build = "#{version}.#{lastStr}"
+      
+        increment_build_number(
+            build_number: build,
+            xcodeproj: "TTjianbao.xcodeproj"
+        )
+    end
+end
+

@@ -1,0 +1,1 @@
+../../../GKPhotoBrowser/GKPhotoBrowser/Core/UIScrollView+GKGestureHandle.h

@@ -1,0 +1,313 @@
+PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - AliyunOSSiOS (2.10.8)
+  - Bugly (2.5.71)
+  - CocoaLumberjack (2.2.0):
+    - CocoaLumberjack/Default (= 2.2.0)
+    - CocoaLumberjack/Extensions (= 2.2.0)
+  - CocoaLumberjack/Core (2.2.0)
+  - CocoaLumberjack/Default (2.2.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.2.0):
+    - CocoaLumberjack/Default
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - GDTActionSDK (1.0.3.2)
+  - GKPhotoBrowser (2.1.3):
+    - GKPhotoBrowser/SD (= 2.1.3)
+  - GKPhotoBrowser/Core (2.1.3)
+  - GKPhotoBrowser/SD (2.1.3):
+    - GKPhotoBrowser/Core
+    - SDWebImage (~> 5.0)
+  - Growing (2.9.1)
+  - GrowingAutoTrackKit (2.9.1):
+    - GrowingCoreKit (= 2.9.1)
+  - GrowingCoreKit (2.9.1):
+    - Growing (= 2.9.1)
+  - GTMBase64 (1.0.1)
+  - IQKeyboardManager (6.5.5)
+  - JCore (2.6.2)
+  - JPush (3.3.2):
+    - JCore (< 3.0.0, >= 2.0.0)
+  - JVerification (2.6.5):
+    - JCore (< 6.0.0, >= 2.1.6)
+  - JXCategoryView (1.5.5)
+  - JXPagingView/Pager (2.0.1)
+  - LBXScan/LBXNative (2.3):
+    - LBXScan/Types (~> 2.2)
+  - LBXScan/LBXZBar (2.3):
+    - LBXScan/Types (~> 2.2)
+    - ZBarSDK (~> 1.3.1)
+  - LBXScan/LBXZXing (2.3):
+    - LBXScan/Types (~> 2.2)
+  - LBXScan/Types (2.3)
+  - LBXScan/UI (2.3):
+    - LBXScan/Types (~> 2.2)
+  - LEEAlert (1.2.8)
+  - libwebp (1.2.0):
+    - libwebp/demux (= 1.2.0)
+    - libwebp/mux (= 1.2.0)
+    - libwebp/webp (= 1.2.0)
+  - libwebp/demux (1.2.0):
+    - libwebp/webp
+  - libwebp/mux (1.2.0):
+    - libwebp/demux
+  - libwebp/webp (1.2.0)
+  - M80AttributedLabel (1.3.3)
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.2.0)
+  - MJExtension (3.2.2)
+  - MJRefresh (3.5.0)
+  - NELivePlayer (2.4.4)
+  - NIMSDK (6.9.1)
+  - NMCLiveStreaming_MINI (3.1.2)
+  - NTESARCommonSDK (1.0.0)
+  - NTESBaseComponent (1.1)
+  - NTESLiveDetect (2.2.7):
+    - NTESARCommonSDK (= 1.0.0)
+    - NTESBaseComponent (= 1.1)
+  - Protobuf (3.17.0)
+  - QBImagePickerController (3.4.0)
+  - Reachability (3.1.1)
+  - ReactiveObjC (3.1.1)
+  - SDAutoLayout (2.2.1)
+  - SDWebImage (5.9.0):
+    - SDWebImage/Core (= 5.9.0)
+  - SDWebImage/Core (5.9.0)
+  - SDWebImageWebPCoder (0.6.1):
+    - libwebp (~> 1.0)
+    - SDWebImage/Core (~> 5.7)
+  - SensorsABTesting (0.0.3):
+    - SensorsAnalyticsSDK (>= 2.1.14)
+  - SensorsAnalyticsSDK (2.3.0):
+    - SensorsAnalyticsSDK/Core (= 2.3.0)
+  - SensorsAnalyticsSDK/Core (2.3.0)
+  - SHSegmentedControl (1.3.4):
+    - SHSegmentedControl/SHExtension (= 1.3.4)
+    - SHSegmentedControl/SHSegmentContent (= 1.3.4)
+  - SHSegmentedControl/SHExtension (1.3.4)
+  - SHSegmentedControl/SHSegmentContent (1.3.4):
+    - Masonry
+    - MJRefresh
+    - SHSegmentedControl/SHExtension
+  - SSKeychain (1.4.1)
+  - SSZipArchive (1.8.1)
+  - SVGAPlayer (2.5.2):
+    - SVGAPlayer/Core (= 2.5.2)
+    - SVGAPlayer/ProtoFiles (= 2.5.2)
+  - SVGAPlayer/Core (2.5.2):
+    - SSZipArchive (>= 1.8.1)
+    - SVGAPlayer/ProtoFiles
+  - SVGAPlayer/ProtoFiles (2.5.2):
+    - Protobuf (~> 3.4)
+  - SVProgressHUD (2.2.5)
+  - Toast (2.4)
+  - TYPagerController (2.1.2)
+  - UMCAnalytics (6.1.0):
+    - UMCCommon
+  - UMCCommon (2.1.4)
+  - UMCCommonLog (1.0.0)
+  - UMCSecurityPlugins (1.0.6)
+  - UMCShare/Core (6.9.10):
+    - UMCCommon
+  - UMCShare/UI (6.9.10):
+    - UMCCommon
+    - UMCShare/Core
+  - WechatOpenSDK (1.8.7.1)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+  - ZBarSDK (1.3.1)
+  - ZFPlayer (3.2.17):
+    - ZFPlayer/Core (= 3.2.17)
+  - ZFPlayer/Core (3.2.17)
+
+DEPENDENCIES:
+  - AFNetworking (= 4.0.1)
+  - AliyunOSSiOS (= 2.10.8)
+  - Bugly (= 2.5.71)
+  - CocoaLumberjack (= 2.2.0)
+  - FMDB (= 2.7.5)
+  - GDTActionSDK (= 1.0.3.2)
+  - GKPhotoBrowser (= 2.1.3)
+  - GrowingAutoTrackKit (= 2.9.1)
+  - GrowingCoreKit (= 2.9.1)
+  - GTMBase64
+  - IQKeyboardManager (= 6.5.5)
+  - JPush (= 3.3.2)
+  - JVerification (= 2.6.5)
+  - JXCategoryView (= 1.5.5)
+  - JXPagingView/Pager (= 2.0.1)
+  - LBXScan/LBXNative (= 2.3)
+  - LBXScan/LBXZBar (= 2.3)
+  - LBXScan/LBXZXing (= 2.3)
+  - LBXScan/UI (= 2.3)
+  - LEEAlert (= 1.2.8)
+  - M80AttributedLabel (= 1.3.3)
+  - Masonry (= 1.1.0)
+  - MBProgressHUD
+  - MJExtension (= 3.2.2)
+  - MJRefresh (= 3.5.0)
+  - NELivePlayer (= 2.4.4)
+  - NIMSDK (= 6.9.1)
+  - NMCLiveStreaming_MINI (= 3.1.2)
+  - NTESLiveDetect (~> 2.2.0)
+  - QBImagePickerController (= 3.4.0)
+  - Reachability (= 3.1.1)
+  - ReactiveObjC (= 3.1.1)
+  - SDAutoLayout (= 2.2.1)
+  - SDWebImage (= 5.9.0)
+  - SDWebImageWebPCoder (= 0.6.1)
+  - SensorsABTesting
+  - SensorsAnalyticsSDK (= 2.3.0)
+  - SHSegmentedControl (= 1.3.4)
+  - SSKeychain (= 1.4.1)
+  - SSZipArchive (= 1.8.1)
+  - SVGAPlayer (= 2.5.2)
+  - SVProgressHUD (= 2.2.5)
+  - Toast (= 2.4)
+  - TYPagerController (= 2.1.2)
+  - UMCAnalytics (= 6.1.0)
+  - UMCCommon (= 2.1.4)
+  - UMCCommonLog (= 1.0.0)
+  - UMCSecurityPlugins (= 1.0.6)
+  - UMCShare/UI (= 6.9.10)
+  - WechatOpenSDK (= 1.8.7.1)
+  - YYKit (= 1.0.9)
+  - ZFPlayer (= 3.2.17)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
+    - AliyunOSSiOS
+    - Bugly
+    - CocoaLumberjack
+    - FMDB
+    - GDTActionSDK
+    - GKPhotoBrowser
+    - Growing
+    - GrowingAutoTrackKit
+    - GrowingCoreKit
+    - GTMBase64
+    - IQKeyboardManager
+    - JCore
+    - JPush
+    - JVerification
+    - JXCategoryView
+    - JXPagingView
+    - LBXScan
+    - LEEAlert
+    - libwebp
+    - M80AttributedLabel
+    - Masonry
+    - MBProgressHUD
+    - MJExtension
+    - MJRefresh
+    - NELivePlayer
+    - NIMSDK
+    - NMCLiveStreaming_MINI
+    - NTESARCommonSDK
+    - NTESBaseComponent
+    - NTESLiveDetect
+    - Protobuf
+    - QBImagePickerController
+    - Reachability
+    - ReactiveObjC
+    - SDAutoLayout
+    - SDWebImage
+    - SDWebImageWebPCoder
+    - SensorsABTesting
+    - SensorsAnalyticsSDK
+    - SHSegmentedControl
+    - SSKeychain
+    - SSZipArchive
+    - SVGAPlayer
+    - SVProgressHUD
+    - Toast
+    - TYPagerController
+    - UMCAnalytics
+    - UMCCommon
+    - UMCCommonLog
+    - UMCSecurityPlugins
+    - UMCShare
+    - WechatOpenSDK
+    - YYKit
+    - ZBarSDK
+    - ZFPlayer
+
+SPEC CHECKSUMS:
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  AliyunOSSiOS: 8db92936545593b9e5c66d680ef2ac0738946651
+  Bugly: fd066c75c4a0eca1440f9b6a84bd37d51bfc85ac
+  CocoaLumberjack: 17fe8581f84914d5d7e6360f7c70022b173c3ae0
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  GDTActionSDK: 43ac3b744d8911e6525cc349d5bf7e64795e5728
+  GKPhotoBrowser: b1f7535f9c04f0d3a17b36f138e4b8de3b4cccb4
+  Growing: 63f7e48bd257776338bd1a62b5f07fdd5049ce73
+  GrowingAutoTrackKit: ffb6e3b71362df0d789901e5b383d4a50afd6b8f
+  GrowingCoreKit: 1bea4a162213f2162a653bab3a02adaf967eb01f
+  GTMBase64: f0f91be06a7a20b84c8e4fee30c0430395091d82
+  IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
+  JCore: 0cb4fc5892bc97af4f27283875369ead3eaa3067
+  JPush: 9468c84a3809dc3ac2fc1c89c6d1d6c858a91bf5
+  JVerification: c2da4dc895b77854245dfd83ab6a7a34c3741725
+  JXCategoryView: 0293fcb356f10a5c2e679dac0a1a5f1899ee0c87
+  JXPagingView: cacaf7512d223e21133bd71ca245126acc5f535a
+  LBXScan: e51449f0832d1fe17da632af0d22adeb3cfa3543
+  LEEAlert: 3b8e27b120b9e076274f4083c7cffd6f58257c07
+  libwebp: e90b9c01d99205d03b6bb8f2c8c415e5a4ef66f0
+  M80AttributedLabel: 3bcacb2d85e6c66e32fb930aac2f04eca3974106
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJExtension: d9b9c74cbdeb724c1e9ecbb157b318276e62e876
+  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
+  NELivePlayer: 019ffca9a9637c80645f658b331cce9b4db14af6
+  NIMSDK: 52ce92caa6d8f783eca25bf09e7901752abb7c25
+  NMCLiveStreaming_MINI: 0179340f9e6329e5485698d1d1123de6a4f6a0ad
+  NTESARCommonSDK: 617f3ebc30fb8a50454f0aa46dd22f23b6ca1845
+  NTESBaseComponent: 05d8e638e45ca5eae31ef722658c001780465c5f
+  NTESLiveDetect: 459f040375559764a0d34c22d0d9b6f7c53ea66e
+  Protobuf: 7327d4444215b5f18e560a97f879ff5503c4581c
+  QBImagePickerController: d54cf93db6decf26baf6ed3472f336ef35cae022
+  Reachability: dd9aa4fb6667b9f787690a74f53cb7634ce99893
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+  SDAutoLayout: 8bf6b3bbc8b01f775d4defbb4fda2ace805461be
+  SDWebImage: 62ae4a18473520c67b79e9724c31a63599cc9423
+  SDWebImageWebPCoder: d0dac55073088d24b2ac1b191a71a8f8d0adac21
+  SensorsABTesting: 0d4625c4deb408c532c79fc49f84ce5682a6c712
+  SensorsAnalyticsSDK: 6044f1e2a0c6ed183d94581e5e620bf69594d3ff
+  SHSegmentedControl: ad3d644ee5c7d01f70d1ecc95c1912571544af06
+  SSKeychain: 55cc80f66f5c73da827e3077f02e43528897db41
+  SSZipArchive: 04547dfa448be5ed7ecbaf7eaf8a6e9eb9b42997
+  SVGAPlayer: c666a7886b72ee77d494c49aa4fd61df175dd103
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  Toast: 0773b8fc0e97352ca6054517bec7ebdd4110029d
+  TYPagerController: 262556ecef99986d26ed77fb1288a198ed42f4af
+  UMCAnalytics: 3503f179f7af932b30af9ac161ac11fb48fa72b6
+  UMCCommon: b0703b0053323f598e01670ea702b8eb1e66e611
+  UMCCommonLog: 05a2d5de21858e3d870551562cff405c1366d244
+  UMCSecurityPlugins: 0831a08f3988f3cea9f1d3a7626cd9bee4fef150
+  UMCShare: a4a95fbdd61ecce5b6751d8c9ed9b519e80fcbc9
+  WechatOpenSDK: 6a4d1436c15b3b5fe2a0bd383f3046010186da44
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+  ZBarSDK: 4c1b5daeb7d6cc67dc9355e690af0230a661f6ec
+  ZFPlayer: ac9cb879291eec259e7fe77e840c884e2b80a499
+
+PODFILE CHECKSUM: 2c04ec4165b979c0a931703266f48c0a9c4d62ce
+
+COCOAPODS: 1.10.0

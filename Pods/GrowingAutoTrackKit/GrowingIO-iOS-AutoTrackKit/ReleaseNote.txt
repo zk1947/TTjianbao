@@ -1,0 +1,91 @@
+更新日志
+https://docs.growingio.com/v3/developer-manual/sdkintegrated/ios-sdk/iossdk-log
+2.8.22 Release Note
+
+2.8.20 Release Note
+1.半自动埋点优化
+2.更新新版帮助文档
+
+2.8.19 Release Note
+1.优化日志性能
+2.解决个别用户符号重定义错误
+
+2.8.17 Release Note
+1.WKWebView兼容性提升
+2.做了一些小优化
+
+2.8.16 Release Note
+1.提升稳定性
+
+2.8.15 Release Note
+1. 新增 setSessionInterval:(NSTimeInterval)interval 接口
+2. 优化代码性能
+
+2.8.14 Release Note
+1.对广告采集敏感数据进行加密，加强数据安全
+
+2.8.13 Release Note
+1.优化埋点SDK在极端情况下用户量、访问量、进入次数预定义指标不准确的问题
+
+2.8.12 Release note
+1.去除对UIWebView的支持
+
+2.8.11 Release note
+1.默认关闭imp事件的采集
+
+2.8.10 Release note
+无
+
+2.8.9 Release note
+1.fix web圈app 特殊字符不能圈选
+
+2.8.8 Release note
+1.无
+
+2.8.7 Release note
+1.fix强引用vc带来特殊场景下crash的问题
+2.解决WKWebView内存泄漏的问题
+
+2.8.6 Release note
+无
+
+2.8.5 Release note
+1.web圈app输入框可以圈选
+2.imp半自动打点可以设置视图比例来判定是否满足展示条件
+
+2.8.4 Release note
+1.imp半自动打点 自动取v
+
+2.8.3 Release note
+修复iOS9 UIInputWindowController 在GrowingAspectModeSubClass crash的问题
+
+2.8.2 Release note
+无
+
+2.8.1 Release note
+1.增强SDK稳定性
+2.新增imp半自动打点功能
+3.修复web圈app在chrome环境有时断开链接的问题
+
+2.8.0 Release Note
+1.修复web圈app,web页面热图坐标错位的问题
+
+2.7.8 Release Note
+1.修复iOS13 UISearchBar崩溃问题
+
+2.7.7 Release Note
+1.修复hybrid自定义事件匹配page问题
+2.完善对SDCycleScrollView的支持
+
+2.7.6 Release Note
+1. 圈选增加对Hybrid元素的chng事件支持
+
+2.7.5 Release Note
+无
+
+2.7.4 Release Note
+1.修复了GrowingAspectModeDynamicSwizzling Mode 下 WKWebView crash
+2.web圈app连接流畅度优化
+
+
+

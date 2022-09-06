@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>icon</key>
+	<string>icon_safe_img</string>
+	<key>title</key>
+	<string>银联商务自助签约</string>
+	<key>desc</key>
+	<string>为更好地保护您的权益，我们已联合银联商务共同提供交易清算服务。完成签约并通过审核后，交易所得资金将由银联管理。</string>
+	<key>alert</key>
+	<string>签约前，您需要准备好身份证和银行卡信息</string>
+	<key>list</key>
+	<array>
+		<dict>
+			<key>title</key>
+			<string>个人商户</string>
+			<key>desc</key>
+			<string>签约前您需要准备好身份证、银行账户信息</string>
+			<key>icon</key>
+			<string>icon_sign_person</string>
+			<key>customerType</key>
+			<string>02</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>企业商户</string>
+			<key>desc</key>
+			<string>签约前您需要准备好法人身份证、营业信息、对公账户信息</string>
+			<key>icon</key>
+			<string>icon_sign_company</string>
+			<key>customerType</key>
+			<string>00</string>
+		</dict>
+	</array>
+</dict>
+</plist>

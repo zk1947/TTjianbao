@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000348">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="1: get_version_number_from_xcodeproj" time="12.599683">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="2: upload_dsym_to_bugly" time="101.534797">
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>

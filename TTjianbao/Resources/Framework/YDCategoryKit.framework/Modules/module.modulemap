@@ -1,0 +1,6 @@
+framework module YDCategoryKit {
+  umbrella header "YDCategoryKit.h"
+
+  export *
+  module * { export * }
+}

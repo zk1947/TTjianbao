@@ -1,0 +1,1 @@
+../../../SensorsAnalyticsSDK/SensorsAnalyticsSDK/Core/AutoTrack/Cell/NSObject+SACellClick.h

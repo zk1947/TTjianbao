@@ -1,0 +1,42 @@
+//
+//  TTjianbao.pch
+//  TTjianbao
+//  Description:谨记！！！仅允许放全局性、必要头文件
+//  Created by Jesse on 2019/11/18.
+//  Copyright © 2019 YiJian Tech. All rights reserved.
+//
+
+#ifndef TTjianbao_Prefix_pch
+#define TTjianbao_Prefix_pch
+
+#ifdef __OBJC__
+
+/**基本不可能修改的部分*/
+#import "JHEnvVariableDefine.h" /**环境切换开关*/
+#import <CocoaLumberjack/CocoaLumberjack.h> /**log*/
+#import <ReactiveObjC/ReactiveObjC.h>  /**弱化引用*/
+#import "JHSingleton.h" /**单例*/
+#import "Masonry.h" /**约束*/
+#import "MJExtension.h" /**数据转换*/
+#import "Growing.h" /**埋点*/
+#import "JHUserProfileStatistics.h" /**用户画像埋点*/
+#import "UIView+NTES.h"  /**视图坐标*/
+#import "UIView+UIHelp.h" /** UI便利构造器 */
+#import "UIScrollView+JHEmpty.h"/** 列表缺省样式等 */
+#import "UITipView.h" /**toast类 大多数页面都使用该类所以考虑放在pch文件里面*/
+/**神策埋点*/
+#import "JHTracking.h"
+
+/**必要时可修改的部分*/
+#import "Taodangpu.h"
+#import "JHDispatch.h"
+#import "NSArray+JHExtension.h"
+#import "NSObject+Cast.h"
+#import "UIConstManager.h"
+
+#import "TTjianbaoMarcoNotification.h"
+/**全局常量*/
+#import "TTjianbaoConst.h"
+
+#endif
+#endif

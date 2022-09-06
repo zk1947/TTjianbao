@@ -1,0 +1,41 @@
+
+. v3.3.0 - 社区3.0
+├─── -->>>>>> 按业务模块划分
+│   │
+│   ├── Manager：
+│   │   ├── ApiManager：网络请求（按功能模块离散划分）
+│   │   ├── SQManager：社区管理类（频道管理、草稿箱文件读写等）
+│   │   ├── xxx：
+│   │   └
+│   │
+│   ├── Model：社区业务数据模型
+│   │
+│   ├── Help：社区辅助类
+│   │
+│   ├── PublicViews：社区可重用视图(cell等)
+│   │
+│   ├── Modules：业务模块
+│   │   ├── HomePage：首页
+│   │   │   ├── HomePageController：首页 框架
+│   │   │   ├── RcmdListController：推荐列表
+│   │   │   ├── HotListController：热帖列表
+│   │   │   ├── PlateListController： 版块列表
+│   │   │   └
+│   │   ├── Search：搜索
+│   │   │
+│   │   ├── Publish：发布
+│   │   │
+│   │   ├── PlateSelect：发布页-板块选择
+│   │   │
+│   │   ├── PlateDetail：版块详情
+│   │   │
+│   │   ├── TopicDetail：话题详情
+│   │   │
+│   │   ├── PostDetail：文章详情
+│   │   │
+│   │   ├── xxx：xxx
+│   │   │
+│   ├──
+├
+│── /* end */
+

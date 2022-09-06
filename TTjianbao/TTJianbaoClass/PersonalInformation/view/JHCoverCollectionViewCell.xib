@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="JHCoverCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="127" height="119"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="127" height="119"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYw-ka-mrm">
+                        <rect key="frame" x="0.0" y="0.0" width="127" height="119"/>
+                        <inset key="contentEdgeInsets" minX="0.0" minY="5" maxX="5" maxY="0.0"/>
+                        <state key="selected" image="icon_cover_selected"/>
+                        <connections>
+                            <action selector="seletedAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="bpg-Pd-pg1"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7l-Ct-E7u">
+                        <rect key="frame" x="107" y="0.0" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="5Eh-7n-3Zk"/>
+                            <constraint firstAttribute="width" constant="20" id="6rV-XS-JNv"/>
+                        </constraints>
+                        <state key="normal" image="icon_cover_close"/>
+                        <connections>
+                            <action selector="deleteAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="GFx-Od-88o"/>
+                        </connections>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dL2-yH-x5l">
+                        <rect key="frame" x="52" y="57" width="45" height="42"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.99607843139999996" green="0.88235294119999996" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="rYw-ka-mrm" secondAttribute="trailing" id="IdD-WZ-wCN"/>
+                <constraint firstItem="rYw-ka-mrm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Lg1-bB-jbc"/>
+                <constraint firstItem="rYw-ka-mrm" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="PKc-Zs-OZf"/>
+                <constraint firstItem="H7l-Ct-E7u" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="aQs-rU-80j"/>
+                <constraint firstAttribute="bottom" secondItem="rYw-ka-mrm" secondAttribute="bottom" id="dnT-i4-799"/>
+                <constraint firstAttribute="trailing" secondItem="H7l-Ct-E7u" secondAttribute="trailing" id="q4s-wx-gKB"/>
+            </constraints>
+            <size key="customSize" width="127" height="119"/>
+            <connections>
+                <outlet property="coverBtn" destination="rYw-ka-mrm" id="aYv-zQ-dzy"/>
+                <outlet property="deleteBtn" destination="H7l-Ct-E7u" id="rML-j0-PhL"/>
+                <outlet property="rightIcon" destination="dL2-yH-x5l" id="w8A-3v-5RM"/>
+            </connections>
+            <point key="canvasLocation" x="72.5" y="158.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="icon_cover_close" width="21" height="21"/>
+        <image name="icon_cover_selected" width="117" height="117"/>
+    </resources>
+</document>

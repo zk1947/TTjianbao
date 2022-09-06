@@ -1,0 +1,99 @@
+//
+//  CityModelData.h
+//  ProvinceAndCityAndTown
+//
+//  Created by 冷求慧 on 16/12/27.
+//  Copyright © 2016年 冷求慧. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@class Province,City,District;
+//@interface CityModelData : NSObject
+///**
+// *  省份模型数组
+// */
+//@property (nonatomic, strong) NSArray<Province *> *province;
+//
+//@end
+//@interface Province : NSObject
+///**
+// *  省份名字
+// */
+//@property (nonatomic, copy) NSString *name;
+///**
+// *  城市模型数组
+// */
+//@property (nonatomic, strong) NSArray<City *> *city;
+//
+//@end
+//
+//@interface City : NSObject
+///**
+// *  城市名字
+// */
+//@property (nonatomic, copy) NSString *name;
+///**
+// *  县级模型数组
+// */
+//@property (nonatomic, strong) NSArray<District *> *district;
+//
+//@end
+//
+//@interface District : NSObject
+///**
+// *  县级名字
+// */
+//@property (nonatomic, copy) NSString *name;
+///**
+// *  邮编
+// */
+//@property (nonatomic, copy) NSString *zipcode;
+
+//
+
+
+
+@interface CityModelData : NSObject
+/**
+ *  省份模型数组
+ */
+@property (nonatomic, strong) NSArray<Province *> *province;
+
+@end
+@interface Province : NSObject
+/**
+ *  省份名字
+ */
+@property (nonatomic, copy) NSString *areaName;
+@property (nonatomic, copy) NSString *areaId;
+/**
+ *  城市模型数组
+ */
+@property (nonatomic, strong) NSArray<City *> *child;
+
+@end
+
+@interface City : NSObject
+/**
+ *  城市名字
+ */
+@property (nonatomic, copy) NSString *areaName;
+@property (nonatomic, copy) NSString *areaId;
+/**
+ *  县级模型数组
+ */
+@property (nonatomic, strong) NSArray<District *> *child;
+
+@end
+
+@interface District : NSObject
+/**
+ *  县级名字
+ */
+@property (nonatomic, copy) NSString *areaName;
+@property (nonatomic, copy) NSString *areaId;
+
+@end
+
+

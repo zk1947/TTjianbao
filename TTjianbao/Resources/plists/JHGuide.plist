@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>iconName</key>
+		<string>icon_guide_look</string>
+		<key>title</key>
+		<string>免费鉴定</string>
+		<key>detail</key>
+		<string>给我的宝贝鉴定、看专家鉴定直播</string>
+		<key>btnTitle</key>
+		<string>找老师鉴定</string>
+		<key>dataType</key>
+		<string>3</string>
+		<key>vcName</key>
+		<string>BaseTabBarController</string>
+	</dict>
+	<dict>
+		<key>iconName</key>
+		<string>icon_guide_buy</string>
+		<key>title</key>
+		<string>源头直购</string>
+		<key>detail</key>
+		<string>源头直播好货低价购</string>
+		<key>btnTitle</key>
+		<string>去卖场逛逛</string>
+		<key>dataType</key>
+		<string>1</string>
+		<key>vcName</key>
+		<string>BaseTabBarController</string>
+	</dict>
+	<dict>
+		<key>iconName</key>
+		<string>icon_guide_com</string>
+		<key>title</key>
+		<string>文玩社区</string>
+		<key>detail</key>
+		<string>和千万宝友、专家在线交流</string>
+		<key>btnTitle</key>
+		<string>和宝友聊聊</string>
+		<key>dataType</key>
+		<string>0</string>
+		<key>vcName</key>
+		<string>BaseTabBarController</string>
+	</dict>
+</array>
+</plist>
